@@ -85,7 +85,7 @@ const server = http.createServer((request, response) => {
                     }
                 })
         }
-        else if (request.url === "/data/create" && request.method === "GET") {
+        else {
             // Handling GET requests to the POST route
             response.writeHead(405, { "Content-Type": "application/json" });
             response.write(JSON.stringify({ message: "Method not allowed. Use POST method." }));
